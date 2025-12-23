@@ -87,16 +87,6 @@ GLuint loadTexture(const char* path) {
     return tex;
 }
 
-void setMaterial(float r, float g, float b, bool active) {
-    GLfloat diff[] = {r, g, b, 1};
-    GLfloat amb[] = {r * 0.2f, g * 0.2f, b * 0.2f, 1};
-
-    if (active) diff[0] = diff[1] = diff[2] = 1;
-
-    glMaterialfv(GL_FRONT, GL_DIFFUSE, diff);
-    glMaterialfv(GL_FRONT, GL_AMBIENT, amb);
-}
-
 void applyHighlight(bool active) {
     if (active) {
         GLfloat emissive[] = {0.4f, 0.4f, 0.0f, 1.0f};
