@@ -326,7 +326,6 @@ int main() {
         glRotatef(camRotX, 1, 0, 0);
         glRotatef(camRotY, 0, 1, 0);
 
-        setupLight();
         keyboard(w);
 
         for (int i = 0;i < objects.size();i++) {
